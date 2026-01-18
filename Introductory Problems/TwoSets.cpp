@@ -21,17 +21,7 @@ using namespace std;
 #define double long double
 #define mod 1000000007
 #define pi 3.1415926535897932384626433832795
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-void setIO(string name = "") {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
- 
-    if (!name.empty()) {
-        freopen((name + ".in").c_str(), "r", stdin);
-        freopen((name + ".out").c_str(), "w", stdout);
-    }
-}
+
 vector < int > read_arr(int n) {
     vector < int > arr(n);
     for (int & x: arr) cin >> x;
@@ -53,7 +43,6 @@ vector < int > SieveOfEratosthenes(int n) {
     return primes;
 }
 signed main() {
-    setIO();
     int t=1,n;
     while (t--) {
         cin >> n;
